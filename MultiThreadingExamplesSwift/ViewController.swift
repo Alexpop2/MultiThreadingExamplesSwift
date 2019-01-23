@@ -9,12 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loadImageWithcCompletion { (image) in
+            self.imageView.image = image
+        }
     }
 
-
+    func loadImageWithcCompletion(completion: @escaping (UIImage?) -> Void) {
+        let backQueue = DispatchQueue.global(qos: .background)
+        
+        backQueue.async {
+            let image = self.loadImage()
+            DispatchQueue.main.async {
+                completion(image)
+            }
+        }
+    }
+    
+    func loadImage()-> UIImage? {
+        return UIImage(named: "123")
+    }
 }
 

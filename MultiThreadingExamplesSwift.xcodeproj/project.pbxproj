@@ -12,8 +12,8 @@
 		602D867121F7A5AC00234338 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602D866F21F7A5AC00234338 /* Main.storyboard */; };
 		602D867321F7A5AE00234338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 602D867221F7A5AE00234338 /* Assets.xcassets */; };
 		602D867621F7A5AE00234338 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 602D867421F7A5AE00234338 /* LaunchScreen.storyboard */; };
-		602D868121F7A5AE00234338 /* MultiThreadingExamplesSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602D868021F7A5AE00234338 /* MultiThreadingExamplesSwiftTests.swift */; };
-		602D868C21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602D868B21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests.swift */; };
+		602D869A21F7A5E900234338 /* ThreadSafeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602D869921F7A5E900234338 /* ThreadSafeClass.swift */; };
+		602D869C21F7B16200234338 /* DoerClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602D869B21F7B16200234338 /* DoerClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,9 @@
 		602D867521F7A5AE00234338 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		602D867721F7A5AE00234338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		602D867C21F7A5AE00234338 /* MultiThreadingExamplesSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiThreadingExamplesSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		602D868021F7A5AE00234338 /* MultiThreadingExamplesSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiThreadingExamplesSwiftTests.swift; sourceTree = "<group>"; };
-		602D868221F7A5AE00234338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		602D868721F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MultiThreadingExamplesSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		602D868B21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiThreadingExamplesSwiftUITests.swift; sourceTree = "<group>"; };
-		602D868D21F7A5AE00234338 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		602D869921F7A5E900234338 /* ThreadSafeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeClass.swift; sourceTree = "<group>"; };
+		602D869B21F7B16200234338 /* DoerClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoerClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				602D866A21F7A5AC00234338 /* MultiThreadingExamplesSwift */,
-				602D867F21F7A5AE00234338 /* MultiThreadingExamplesSwiftTests */,
-				602D868A21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests */,
 				602D866921F7A5AC00234338 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,26 +99,10 @@
 				602D867221F7A5AE00234338 /* Assets.xcassets */,
 				602D867421F7A5AE00234338 /* LaunchScreen.storyboard */,
 				602D867721F7A5AE00234338 /* Info.plist */,
+				602D869921F7A5E900234338 /* ThreadSafeClass.swift */,
+				602D869B21F7B16200234338 /* DoerClass.swift */,
 			);
 			path = MultiThreadingExamplesSwift;
-			sourceTree = "<group>";
-		};
-		602D867F21F7A5AE00234338 /* MultiThreadingExamplesSwiftTests */ = {
-			isa = PBXGroup;
-			children = (
-				602D868021F7A5AE00234338 /* MultiThreadingExamplesSwiftTests.swift */,
-				602D868221F7A5AE00234338 /* Info.plist */,
-			);
-			path = MultiThreadingExamplesSwiftTests;
-			sourceTree = "<group>";
-		};
-		602D868A21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests */ = {
-			isa = PBXGroup;
-			children = (
-				602D868B21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests.swift */,
-				602D868D21F7A5AE00234338 /* Info.plist */,
-			);
-			path = MultiThreadingExamplesSwiftUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +238,8 @@
 			files = (
 				602D866E21F7A5AC00234338 /* ViewController.swift in Sources */,
 				602D866C21F7A5AC00234338 /* AppDelegate.swift in Sources */,
+				602D869C21F7B16200234338 /* DoerClass.swift in Sources */,
+				602D869A21F7A5E900234338 /* ThreadSafeClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602D868121F7A5AE00234338 /* MultiThreadingExamplesSwiftTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				602D868C21F7A5AE00234338 /* MultiThreadingExamplesSwiftUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
